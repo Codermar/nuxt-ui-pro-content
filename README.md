@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
+<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3 + Nuxt UI Pro, and Nuxt Content
 </h2><br>
 
 <p align="center">
@@ -36,6 +36,11 @@
 - 🦾 TypeScript, of course.
 
 - 📲 [PWA](https://github.com/vite-pwa/nuxt) with offline support and auto-update behavior.
+
+## Added features
+
+- Nuxt Content
+- NuxtUI Pro
 
 ## Plugins
 
