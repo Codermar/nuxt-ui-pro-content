@@ -2,6 +2,7 @@ import { pwa } from './app/config/pwa'
 import { appDescription } from './app/constants/index'
 
 export default defineNuxtConfig({
+  extends: ['@nuxt/ui-pro'],
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -10,8 +11,19 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
     '@nuxt/content',
+    '@nuxt/ui',
   ],
+  
+  content: {
+    contentHead: true,
+    // documentDriven: {
+    //   layoutFallbacks: ['theme'],
+    // },
+  },
 
+  uiPro: {
+    content: true,
+  },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
