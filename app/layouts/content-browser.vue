@@ -23,7 +23,11 @@
 
     <!-- Main Content -->
     <main class="flex-grow p-4">
-      <slot />
+      <div class="min-h-[calc(100vh-4rem)]">
+        <slot />
+      </div>
+
+      <Footer />
     </main>
   </div>
 </template>
