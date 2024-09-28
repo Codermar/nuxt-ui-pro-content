@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+const localNav = ref([
+  {
+    title: 'Home',
+    path: '/',
+  },
+  {
+    title: 'content browser',
+    link: '/content-browser',
+  },
+])
+</script>
+
 <template>
   <div class="flex">
     <!-- Left Navigation -->
@@ -6,24 +19,26 @@
         Content
       </h2>
       <ContentNavigation v-slot="{ navigation }">
-        <UAside>
+        <UAside class="min-w-60">
           <UNavigationTree
             :links="mapContentNavigation(navigation)"
           />
         </UAside>
-        <!-- <ul>
-          <li v-for="link of navigation" :key="link._path">
-            <NuxtLink :to="link._path" class="block py-2">
-              {{ link.title }}
-            </NuxtLink>
-          </li>
-        </ul> -->
       </ContentNavigation>
     </nav>
 
     <!-- Main Content -->
     <main class="flex-grow p-4">
       <div class="min-h-[calc(100vh-4rem)]">
+        <nav>
+          <ul class="mb-4 flex justify-start gap-x-1">
+            <li v-for="link of localNav" :key="link.path">
+              <NuxtLink :to="link.path" class="block bdb p-1">
+                {{ link.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
         <slot />
       </div>
 
